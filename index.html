@@ -5,46 +5,58 @@
 	<title>Convite para sair</title>
 	<style>
 		body {
-			background-color: #f2f2f2;
 			font-family: Arial, sans-serif;
 			text-align: center;
 		}
 		h1 {
-			color: #cc0000;
-			font-size: 2.5em;
 			margin-top: 50px;
 		}
 		button {
-			background-color: #cc0000;
+			background-color: #008CBA;
+			color: white;
 			border: none;
-			color: #fff;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 20px;
 			cursor: pointer;
-			font-size: 1.2em;
-			margin-top: 30px;
-			padding: 10px 20px;
-			transition: all 0.3s ease-in-out;
+			border-radius: 10px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 		}
-		button:hover {
-			background-color: #fff;
-			border: 2px solid #cc0000;
-			color: #cc0000;
+		button:hover:not([disabled]) {
+			transform: translate(2px, 2px);
+			box-shadow: none;
 		}
-		#nao {
-			position: relative;
+		button:active {
+			transform: translate(4px, 4px);
 		}
-		#nao:hover {
-			left: 10px;
+		.no-button {
+			animation: shake 0.5s;
+			animation-iteration-count: 3;
+			background-color: red;
+			color: white;
+			box-shadow: none;
+		}
+		@keyframes shake {
+			0% { transform: translate(0, 0) rotate(0deg); }
+			10% { transform: translate(-5px, 0) rotate(-5deg); }
+			20% { transform: translate(5px, 0) rotate(5deg); }
+			30% { transform: translate(-5px, 0) rotate(-5deg); }
+			40% { transform: translate(5px, 0) rotate(5deg); }
+			50% { transform: translate(-5px, 0) rotate(-5deg); }
+			60% { transform: translate(5px, 0) rotate(5deg); }
+			70% { transform: translate(-5px, 0) rotate(-5deg); }
+			80% { transform: translate(5px, 0) rotate(5deg); }
+			90% { transform: translate(-5px, 0) rotate(-5deg); }
+			100% { transform: translate(0, 0) rotate(0deg); }
 		}
 	</style>
-	<script type="text/javascript">
-		function abreLink() {
-			window.open("https://www.youtube.com/watch?v=orWnzqBA63w");
-		}
-	</script>
 </head>
 <body>
-	<h1>Você aceita sair comigo?</h1>
-	<button id="sim" onclick="abreLink()">Sim</button>
-	<button id="nao" onclick="this.style.left = '10px'">Não</button>
+	<h1>Você quer sair comigo sim ou não em?</h1>
+	<button onclick="window.open('https://www.youtube.com/watch?v=orWnzqBA63w')">Sim</button>
+	<button onclick="this.classList.add('no-button');">Não</button>
 </body>
 </html>
