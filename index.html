@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Convite para sair</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		h1 {
+			color: #cc0000;
+			font-size: 2.5em;
+			margin-top: 50px;
+		}
+		button {
+			background-color: #cc0000;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			font-size: 1.2em;
+			margin-top: 30px;
+			padding: 10px 20px;
+			transition: all 0.3s ease-in-out;
+		}
+		button:hover {
+			background-color: #fff;
+			border: 2px solid #cc0000;
+			color: #cc0000;
+		}
+		#nao {
+			position: relative;
+		}
+		#nao:hover {
+			left: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		function abreLink() {
+			window.open("https://www.youtube.com/watch?v=orWnzqBA63w");
+		}
+	</script>
+</head>
+<body>
+	<h1>Você aceita sair comigo?</h1>
+	<button id="sim" onclick="abreLink()">Sim</button>
+	<button id="nao" onclick="this.style.left = '10px'">Não</button>
+</body>
+</html>
